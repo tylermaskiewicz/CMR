@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMR</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        (new URL(window.location.href)).searchParams.forEach((x, y) => 
+            document.getElementById(y).value = x);
+    </script>
 </head>
+
+
+
 <body>
-    <form method="POST">
+
+    <form method=GET>
         <div class="page1">
             <div class="top">
                     <div class="demo">
                         <div class="row">
-                            <input type="text" name="lname" id="lname" class="formfield" style="width:484px">
-                            <input type="text" id="fname" class="formfield" style="width:384px">
+                            <input type="text" name="lname" id="lname" class="formfield" style="width:484px" value="Maskiewicz">
+                            <input type="text" name= "fname" id="fname" class="formfield" style="width:384px">
                             <input type="text" id="mi" class="formfield" style="width:72px">
                         </div>
                         <div class="row">
@@ -52,9 +60,6 @@
                 
 
         </div>
-        <div>
-            <button>Send</button>
-          </div>
     </form>   
 </body>
 </html>

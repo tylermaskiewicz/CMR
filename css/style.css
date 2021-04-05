@@ -1,0 +1,33 @@
+.page1 {
+    width: 1700px;
+    height: 2200px;
+    background-color: aqua;
+    background-image: url('../media/CMR_Page_1.png');
+}
+
+.page2 {
+    width: 1700px;
+    height: 2200px;
+    background-color: aqua;
+    background-image: url('../media/CMR_Page_2.png');
+}
+
+.top {
+    width: 980px;
+    height: 380px;
+    padding-top: 220px;
+    padding-left: 50px;
+
+}
+
+.row {
+    height:38px; 
+    padding-top: 30px;
+    margin: 0px;
+}
+
+.formfield {
+    height: 30px;
+    font-size: 16pt;
+    width: 100%;
+}

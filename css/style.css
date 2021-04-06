@@ -1,33 +1,55 @@
 .page1 {
-    width: 1700px;
-    height: 2200px;
+    width: 850px;
+    height: 1100px;
     background-color: aqua;
     background-image: url('../media/CMR_Page_1.png');
+    background-size: contain;
 }
 
 .page2 {
-    width: 1700px;
-    height: 2200px;
+    width: 850px;
+    height: 1100px;
     background-color: aqua;
     background-image: url('../media/CMR_Page_2.png');
+    background-size: contain;
 }
 
-.top {
-    width: 980px;
-    height: 380px;
-    padding-top: 220px;
-    padding-left: 50px;
+.left {
+    width: 490px;
+    height: 700px;
+    padding-top: 110px;
+    padding-left: 25px;
+
+}
+
+.full {
+    padding-left: 25px;
 
 }
 
 .row {
-    height:38px; 
-    padding-top: 30px;
+    height:15.5px; 
+    padding-top: 16px;
     margin: 0px;
 }
 
 .formfield {
-    height: 30px;
-    font-size: 16pt;
+    height: 13px;
+    font-size: 8pt;
     width: 100%;
+}
+
+input {
+    background-color: transparent;
+    /*border-color: transparent;*/
+}
+
+@media print {
+    @page { margin: 0; }
+    body { margin: 0; }
+  }
+
+* {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+    color-adjust: exact !important;                 /*Firefox*/
 }

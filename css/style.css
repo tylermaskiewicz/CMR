@@ -46,7 +46,7 @@
 
 input {
     background-color: transparent;
-    /*border-color: transparent;*/
+    border-color: transparent;
 }
 
 @media print {

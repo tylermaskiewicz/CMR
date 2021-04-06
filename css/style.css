@@ -39,6 +39,11 @@
     width: 100%;
 }
 
+.checkbox {
+    height: 10px;
+    width: 8px;
+}
+
 input {
     background-color: transparent;
     /*border-color: transparent;*/

@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMR</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        (new URL(window.location.href)).searchParams.forEach((x, y) => 
-            document.getElementById(y).value = x);
-    </script>
+
 </head>
 
 
@@ -21,21 +18,27 @@
             <div class="top">
                     <div class="demo">
                         <div class="row">
-                            <input type="text" name="lname" id="lname" class="formfield" style="width:484px" value="Maskiewicz">
-                            <input type="text" name= "fname" id="fname" class="formfield" style="width:384px">
-                            <input type="text" id="mi" class="formfield" style="width:72px">
+                            <input type="text" id="lname" class="formfield" style="width:237px" value="Maskiewicz">
+                            <input type="text" id="fname" class="formfield" style="width:188px">
+                            <input type="text" id="mi" class="formfield" style="width:30px">
                         </div>
                         <div class="row">
-                            <input type="text" id="st1" class="formfield" style="width:770px">
-                            <input type="text" id="st2" class="formfield" style="width:182px">
+                            <input type="text" id="st1" class="formfield" style="width:380px">
+                            <input type="text" id="st2" class="formfield" style="width:87px">
                         </div>
                         <div class="row">
-                            <input type="text" id="city" class="formfield" style="width:557px">
-                            <input type="text" id="state" class="formfield" style="width:120px">
-                            <input type="text" id="zip" class="formfield" style="width:182px">
-
+                            <input type="text" id="city" class="formfield" style="width:273px">
+                            <input type="text" id="state" class="formfield" style="width:45px">
+                            <input type="text" id="zip" class="formfield" style="width:91px">
+                        </div>
+                        <div class="row">
+                            <input type="text" id="cell" class="formfield" style="width:155px">
+                        </div>
+                        <div class="row">
+                            <input type="text" id="email" class="formfield" style="width:155px">
                         </div>
                     </div>
+
                     
 
                     <div>
@@ -60,6 +63,10 @@
                 
 
         </div>
-    </form>   
+    </form> 
+    <script>
+        (new URL(window.location.href)).searchParams.forEach((x, y) => 
+            document.getElementById(y).value = x);
+    </script>  
 </body>
 </html>

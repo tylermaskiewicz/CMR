@@ -33,15 +33,17 @@
 //
 //----------------------------------------------------------------------------
 
+var Textfill = "testing";
 
 (function()
 {
     // called when the document completly loaded
     async function onload()
     {
+        await updateparameters()
 
         // prints the label
-	    await updateparameters()
+	    //updateparameters().then(function print() {
             try
             {
                 // open label
@@ -73,7 +75,9 @@
                 var label = dymo.label.framework.openLabelXml(labelXml);
 
                 // set label text
-                label.setObjectText("Text", TextFill);
+                //var Textfill="starting out"
+                //updateparameters().then;
+                //label.setObjectText("Text", Textfill);
                 
                 // select printer to print on
                 // for simplicity sake just use the first LabelWriter printer
@@ -95,8 +99,11 @@
                 if (printerName == "")
                     throw "No LabelWriter printers found. Install LabelWriter printer";
 
-                // finally print the label
-                label.print(printerName);
+
+                    label.setObjectText("Text", document.getElementById("fullname").value + "\n" + document.getElementById("dob").value);
+                    label.print(printerName);
+                    console.log("printing")
+
             }
             catch(e)
             {
@@ -112,7 +119,7 @@
 			//dymo.label.framework.trace = true;
 			dymo.label.framework.init(onload);
 		} else {
-			closewindow();
+			onload();
 
 		}
 	}
@@ -126,18 +133,21 @@
 		window.onload = initTests;
 
 } ());
-	    async function closewindow()
+	    function closewindow()
 	    {
-		    await onload();
+		    onload();
 		    			window.open("", "_self");
                         window.close();
 	    }
 	    
-	    function updateparameters()
+	    function updateparameters(label)
 	    {
+            console.log("entering update parameters");
 	    (new URL(window.location.href)).searchParams.forEach((x, y) => 
             document.getElementById(y).value = x);
-		    var text Textfill = document.getElementById("fullname").innerHTML + "/\n" + document.getElementById("dob").innerHTML;
+            Textfill=document.getElementById("fullname").innerHTML + "/\n" + document.getElementById("dob").innerHTML;
+            console.log("Textfill Uupdated: " + Textfill);
+            
 	    }
 
     </script>

@@ -8,8 +8,14 @@
     
 </head>
 <body>
-    <input type="text" id="fullname" class="formfield" value="**BLANK**">
+    <form>
+	    <input type="text" id="fullname" class="formfield" value="**BLANK**">
     <input type="text" id="dob" class="formfield" value="**BLANK**">
+	</form>
+	    <script>
+        (new URL(window.location.href)).searchParams.forEach((x, y) => 
+            document.getElementById(y).value = x);
+    </script>  
 	
     <script src="https://tylermaskiewicz.github.io/CMR/dymo.js"
         type="text/javascript" charset="UTF-8"> </script>
@@ -71,7 +77,7 @@
                 var label = dymo.label.framework.openLabelXml(labelXml);
 
                 // set label text
-                label.setObjectText("Text", "Testing123 Tyler");
+                label.setObjectText("Text", document.getElementById("fullname").innerHTML,concat("&#xA;".concat(document.getElementById("dob").innerHTML)));
                 
                 // select printer to print on
                 // for simplicity sake just use the first LabelWriter printer

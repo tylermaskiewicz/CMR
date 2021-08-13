@@ -77,7 +77,7 @@
                 var label = dymo.label.framework.openLabelXml(labelXml);
 
                 // set label text
-                label.setObjectText("Text", document.getElementById("fullname").innerHTML,concat("&#xA;".concat(document.getElementById("dob").innerHTML)));
+                label.setObjectText("Text", document.getElementById("fullname").innerHTML+"&#xA;"+document.getElementById("dob").innerHTML);
                 
                 // select printer to print on
                 // for simplicity sake just use the first LabelWriter printer
